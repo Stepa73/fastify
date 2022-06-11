@@ -8,8 +8,7 @@ services:
         volumes:
             - './src:/home/node/app/src'
             - './nodemon.json:/home/node/app/nodemon.json'
-        expose:
-            - '8080'
+            - './package.json:/home/node/app/package.json'
         ports:
             - '8080:8080'
         command: npm run dev
