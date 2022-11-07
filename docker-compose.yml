@@ -12,3 +12,11 @@ services:
         ports:
             - '8080:8080'
         command: npm run dev
+    mongo:
+        image: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: root
+        ports:
+            - '27017:27017'
